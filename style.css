@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f8f8f8;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    color: #e23744;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #e23744;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c92d3a;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultSection {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+} 
+
+video {
+    
+    width: 100%;
+    border-radius: 30px;
+}

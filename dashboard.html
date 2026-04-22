@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Delivery Dashboard</h1>
+
+    
+    <div id="onlineSection">
+        <p>Are you online?</p>
+        <button onclick="goOnline(true)">ONLINE</button>
+        <button onclick="goOnline(false)">OFFLINE</button>
+    </div>
+
+    
+    <div id="orderSection" class="hidden">
+        <h2>ONLINE..........</h2>
+        <p>Delivery Boy is ONLINE...</p>
+        <p><b>Your Order Id: 767264163500</b></p>
+        <p>Accept order?</p>
+
+        <button onclick="acceptOrder(true)">Accept</button>
+        <button onclick="acceptOrder(false)">Reject</button>
+    </div>
+
+    <div id="resultSection" class="hidden"></div>
+  
+      
+    <div id="resultSection" class="hidden">
+    <div id="videoContainer"></div>
+</div>
+
+ 
+
+<script src="script.js"></script>
+
+</body>
+</html>
