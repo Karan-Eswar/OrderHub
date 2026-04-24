@@ -6,22 +6,26 @@ body {
 
 .container {
     text-align: center;
-    margin-top: 100px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
 }
 
 h1 {
     color: #e23744;
+    font-size: 28px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 10px;
     border: none;
     background-color: #e23744;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    width: 120px;
 }
 
 button:hover {
@@ -36,10 +40,23 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     color: green;
-} 
+}
 
+/* ✅ Responsive video */
 video {
-    
     width: 100%;
-    border-radius: 30px;
+    max-height: 300px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+    }
 }

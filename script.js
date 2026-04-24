@@ -1,46 +1,34 @@
 function goOnline(status) {
-    const onlineSection = document.getElementById("onlineSection");
-    const orderSection = document.getElementById("orderSection");
-    const resultSection = document.getElementById("resultSection");
-
-    onlineSection.classList.add("hidden");
+    document.getElementById("onlineSection").classList.add("hidden");
 
     if (status) {
-        orderSection.classList.remove("hidden");
+        document.getElementById("orderSection").classList.remove("hidden");
     } else {
-        resultSection.classList.remove("hidden");
-        resultSection.innerHTML = `
-            <p>OFFLINE..........</p>
-            <p>YOU ARE OFFLINE GO ONLINE AND START DELIVERING ORDER</p>
+        const result = document.getElementById("resultSection");
+        result.classList.remove("hidden");
+        result.innerHTML = `
+            <p>OFFLINE...</p>
+            <p>You are offline. Go online to start delivering.</p>
         `;
-
-        
     }
 }
 
 function acceptOrder(order) {
-    const orderSection = document.getElementById("orderSection");
-    const resultSection = document.getElementById("resultSection");
+    document.getElementById("orderSection").classList.add("hidden");
 
-    orderSection.classList.add("hidden");
-    resultSection.classList.remove("hidden");
+    const result = document.getElementById("resultSection");
+    result.classList.remove("hidden");
 
     if (order) {
-       resultSection.innerHTML = `
-    <p>Order accepted by delivery boy</p>
-    <p><b>CLIENT NOTIFICATION:</b> Your order is on the way</p>
+        result.innerHTML = `
+            <p>Order accepted</p>
+            <p><b>Client:</b> Your order is on the way</p>
 
-    <video width="100%" height="400px" autoplay>
-        <source src="./img/delivery.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-`;
-       
-       
-
-    } else {
-        resultSection.innerHTML = `
-            <p>Order rejected</p>
+            <video autoplay muted loop>
+                <source src="./img/delivery.mp4" type="video/mp4">
+            </video>
         `;
+    } else {
+        result.innerHTML = `<p>Order rejected</p>`;
     }
 }
