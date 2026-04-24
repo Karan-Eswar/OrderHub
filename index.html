@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Zomato</title>
 
     <style>
@@ -16,28 +13,53 @@
         }
 
         body {
-            background-color: black;
+            height: 100dvh;
+            width: 100%;
             overflow: hidden;
+
+            /* Background image */
+            background: url('./img/zomato_bg.jpg') no-repeat center center;
+            background-size: cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .container {
-            width: 100%;
-            height: 100dvh; /* fixes mobile viewport issue */
+        /* Optional overlay (makes text clearer) */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* fills screen properly */
-            display: block;
+        /* Center content */
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .tagline {
+            margin-top: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
 
 <body onclick="openApp()">
 
-    <div class="container">
-        <img src="./img/zomato_bg.jpg" alt="Zomato">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <div class="logo">Zomato</div>
+        <div class="tagline">Better food for more people</div>
     </div>
 
     <script>
